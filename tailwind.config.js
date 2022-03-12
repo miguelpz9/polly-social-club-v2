@@ -5,19 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light-bg': '#202020',
-        'dark-bg': '#161616',
-        'full-red': '#FF0000',
-        'full-white': '#FFFFFF',
-        'purple-bg': '#8183D0',
-        'blue-bg': '#4F6F7A',
-        'purple-opposite-bg': '#7E7C2F',
-        'blue-opposite-bg': '#B09085',
-        'btc-shirt-yellow': '#FEBF23',
-        'tiffany': '#0ABAB5'
+        'tiffany': '#0ABAB5',
+        'tiffany60': 'rgba(10, 186, 181, 0.6)'
       },
       fontFamily: {
-        title: ['Squada One'],
+        title: ['Upheaval'],
         text: ['Squada One', 'cursive'],
       },
       fontSize: {
@@ -40,6 +32,11 @@ module.exports = {
       },
       backgroundImage: {
         'header': "url('../src/assets/BG4.png')",
+      },
+      backgroundSize: {
+        '45': '55%',
+        '75': '85%',
+        '65': '65%',
       },
       boxShadow: {
         'bgShadow': 'inset 0 0 25px 50px rgba(0, 0, 0, 1)',

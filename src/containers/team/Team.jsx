@@ -2,11 +2,11 @@ import {React, useEffect, useState} from 'react';
 import {useInView} from 'react-intersection-observer';
 import { motion, useAnimation } from "framer-motion";
 import pollyTitle from '../../assets/pollyTitle.png';
-import socialClubTitle from '../../assets/socialClubSubTitle.png';
-import { About, Utility, Proof } from '../';
+import pollyCard from '../../assets/pollyCard.png';
 import { TextSection } from '../../components';
+import P1R from '../../assets/PHASE1-WHITE.png';
 
-const Header = () => {
+const Team = () => {
     const [alredyAnimated, setAlredyAnimated] = useState();
     const {ref, inView} = useInView();
     const animationRight = useAnimation();
@@ -57,16 +57,29 @@ const Header = () => {
     })
 
     return (
-        <div ref={ref} className="bg-header xl:bg-75 bg-75 bg-top bg-no-repeat h-auto w-full flex flex-col justify-start" id="header">
-            <div className="xl:w-[38%] w-[30%] lg:w-1/2 flex flex-col xl:mt-[6%] 2xl:mt-[7%] mt-[8%] justify-center self-center">
-                <motion.img animate={animationRight}  src={pollyTitle} alt="this is car image" className="lg:p-0 p-0 mb-2 self-center"/>
-                <motion.img animate={animationRight}  src={socialClubTitle} alt="this is car image" className="lg:p-0 mb-4 p-4 pt-2 self-center"/>
-                <p className="text-white font-text text-lg mb-4" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ullam quisquam voluptatum tenetur libero porro quidem dolorem quos, est sint nam. Pariatur doloremque voluptas neque odio expedita laborum. Qui, voluptate?</p>
-                <button type="button" class="text-tiffany animate-pulse hover:animate-none hover:text-white font-text bg-white hover:bg-tiffany focus:ring-4 focus:ring-blue-300 rounded-2xl text-2xl m-2 h-12 text-center">Join the Club</button>
+        <div ref={ref} className="w-full justify-start" id="team">
+            <div className="text-tiffany flex flex-col bg-dark-bg font-title p-4 pb-0 md:text-3xl w-full text-5xl">
+              <h3 className="font-title justify-center pb-4 mx-auto md:text-3xl text-5xl">TEAM</h3>
             </div>
-            <About />
+            <div className="py-6 max-w-6xl mx-auto text-center text-white grid grid-cols-3 justify-center bg-tiffany60 border-4 rounded-3xl border-tiffany align-middle self-center">
+              <div className="self-center mx-auto">
+                <img src={P1R} className="mx-auto w-full mb-4"/>
+                <h5 className="text-4xl font-title">Team #1</h5>
+                <p className="text-xl font-text">Co-founder</p>
+              </div>
+              <div className="self-center mx-auto">
+                <img src={P1R} className="mx-auto w-full mb-4"/>
+                <h5 className="text-4xl font-title">Team #2</h5>
+                <p className="text-xl font-text">Co-founder</p>
+              </div>
+              <div className="self-center mx-auto">
+                <img src={P1R} className="mx-auto w-full mb-4"/>
+                <h5 className="text-4xl font-title">Team #3</h5>
+                <p className="text-xl font-text">Co-founder</p>
+              </div>
+            </div>
         </div>
     );
   };
   
-export default Header;
+export default Team;

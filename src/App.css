@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: black;
+  width: 100vw;
 }
 
 .App-logo {
@@ -12,6 +13,61 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.horizontal-slider {
+  margin: 0.5rem;
+  width: 100%;
+}
+.example-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: #ffffff;
+  border: 5px solid #3774ff;
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+.example-thumb.active {
+  background-color: grey;
+}
+.example-track {
+  position: relative;
+  background: #ddd;
+}
+.example-track.example-track-0 {
+  background: #83a9ff;
+}
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 4px;
+}
+.horizontal-slider .example-thumb {
+  top: 12px;
+  width: 10px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
+}
+
+.blueGradient {
+  /* Created with https://www.css-gradient.com */
+  background-image: rgb(0,99,96);
+  background-image: -moz-linear-gradient(90deg, rgba(0,99,96,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 82%, rgba(0,99,96,1) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgba(0,99,96,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 82%, rgba(0,99,96,1) 100%);
+  background-image: linear-gradient(90deg, rgba(0,99,96,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 82%, rgba(0,99,96,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#006360",endColorstr="#006360",GradientType=1);
+}
+
+.blueFlare {
+  background: rgb(0,99,96);
+  background: -moz-radial-gradient(circle, rgba(0,99,96,1) 0%, rgba(0,0,0,1) 29%);
+  background: -webkit-radial-gradient(circle, rgba(0,99,96,1) 0%, rgba(0,0,0,1) 29%);
+  background: radial-gradient(circle, rgba(0,99,96,1) 0%, rgba(0,0,0,1) 29%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#006360",endColorstr="#000000",GradientType=1);
+  background-size: contain;
+  background-position: left;
 }
 
 .App-header {

@@ -7,11 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 *{
-  scroll-behavior: smooth;
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  scroll-behavior: smooth; /* Standard */
+}
+
+@font-face {
+  font-family: 'Upheaval';
+  src: local('Upheaval'), url(./fonts/Upheaval/upheavtt.ttf) format('truetype');
 }
 
 body {

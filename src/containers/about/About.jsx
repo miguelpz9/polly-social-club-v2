@@ -2,7 +2,8 @@ import {React, useEffect, useState} from 'react';
 import {useInView} from 'react-intersection-observer';
 import { motion, useAnimation } from "framer-motion";
 import pollyTitle from '../../assets/pollyTitle.png';
-import socialClubTitle from '../../assets/socialClubSubTitle.png';
+import pollyCard from '../../assets/pollyCard.png';
+import { TextSection } from '../../components';
 
 const About = () => {
     const [alredyAnimated, setAlredyAnimated] = useState();
@@ -55,11 +56,12 @@ const About = () => {
     })
 
     return (
-        <div ref={ref} className="bg-header bg-contain bg-top bg-no-repeat xl:h-[55vh] h-[70vh] w-screen flex flex-col justify-start" id="header">
-            <div className="w-[25%] xl:w-[30%] lg:w-1/2 flex flex-col  mt-[10%] justify-center self-center">
-                <motion.img animate={animationRight}  src={pollyTitle} alt="this is car image" className="lg:p-0 p-0 self-center"/>
-                <motion.img animate={animationRight}  src={socialClubTitle} alt="this is car image" className="lg:p-0 p-4 pt-2 self-center"/>
-                <button type="button" class="text-tiffany  hover:text-white font-text bg-white hover:bg-tiffany focus:ring-4 focus:ring-blue-300 rounded-2xl text-2xl m-2 h-12 text-center">Join the Club</button>
+        <div ref={ref} className="w-full flex flex-col justify-start mt-[3%]" id="about">
+            <div className="2xl:w-[65%] xl:w-[75%] py-12 max-w-6xl text-left grid grid-cols-2 justify-center align-middle self-center">
+              <div className="p-20 rotate-12">
+                <motion.img animate={animationRight}  src={pollyCard} alt="this is car image" className="self-center"/>
+              </div>
+              <TextSection text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet, ex vitae placerat cursus, lectus purus varius ipsum, quis viverra nunc nunc et nisi. Integer pretium sodales imperdiet. Nam vel est non quam viverra consectetur a vitae nulla. Morbi vehicula, ex elementum varius sagittis, elit elit ornare felis, non malesuada lectus lacus at dui. " title="POLLY SOCIAL CLUB" />
             </div>
         </div>
     );
